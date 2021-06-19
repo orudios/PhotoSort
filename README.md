@@ -1,5 +1,5 @@
 # PhotoSort
-PhotoSort is a simple Python script that sorts the picture and video contents of a directory into appropriate sub-directories based on file extensions, such as ```.arw```, ```.mov```, ```.jpg```. PhotoSorter supports most commonly used photo and video file extensions.
+PhotoSort is a simple Python script that sorts the picture and video contents of a directory into appropriate sub-directories based on file extensions, such as ```.arw```, ```.mov```, ```.jpg```. PhotoSort supports most commonly used photo and video file extensions.
 
 The inspiration behind this script came from having tons of unsorted pictures and videos that I took with my camera and wanting to automate the process.
 
