@@ -1,6 +1,20 @@
 #!/usr/bin/env python3
 import os 
 
+def createDirectory(dir):
+    # Check if directory with name dir exists, if not, create it 
+    if not os.path.isdir(dir):
+        os.mkdir(dir)
+
+def moveFile(dir, file):
+    # Move file from its current location into dir
+    os.replace(file, f'{dir}/{file}')
+
+def populateDirectory(file, dir):
+    # Create the directory and move files
+    createDirectory(dir)
+    moveFile(dir, file)
+
 def photo_sort():
     # Populate with most common raw photo file extensions
     # Source: https://en.wikipedia.org/wiki/Raw_image_format
@@ -36,21 +50,6 @@ def photo_sort():
         # If directory has JPEG images, create a folder for them too
         if file_extension == 'jpeg' or file_extension.lower() == 'jpg':
             populateDirectory(file, 'JPEG')
-        
-
-def createDirectory(dir):
-    # Check if directory with name dir exists, if not, create it 
-    if not os.path.isdir(dir):
-        os.mkdir(dir)
-
-def moveFile(dir, file):
-    # Move file from its current location into dir
-    os.replace(file, f'{dir}/{file}')
-
-def populateDirectory(file, dir):
-    # Create the directory and move files
-    createDirectory(dir)
-    moveFile(dir, file)
 
 if __name__ == '__main__':
     photo_sort()
